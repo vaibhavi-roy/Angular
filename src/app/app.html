@@ -1,0 +1,118 @@
+<!-- <h2>{{ title() }}</h2>
+<h3>Hello, {{ name }}</h3> -->
+<!-- from app.ts: interpolation with signal -->
+<!-- <app-login></app-login>
+<app-signup></app-signup>
+<app-profile></app-profile>
+
+<button (click)="handleClick()">Click Me</button> -->
+
+<!-- <h1>Counter App</h1>
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div> -->
+<!-- <button (click)="increment()" class="btn bg-red">Increment</button>
+        <button (click)="reset()" class="btn bg-black">Reset</button>
+        <button (click)="decrement()" class="btn bg-green">Decrement</button> -->
+<!-- <button (click)="handleCounter('plus')" class="btn bg-red">Increment</button>
+        <button (click)="handleCounter('reset')" class="btn bg-black">Reset</button>
+        <button (click)="handleCounter('minus')" class="btn bg-green">Decrement</button>
+    </div>
+</div> -->
+
+
+<!-- <h1>Event in Angular</h1>
+<button class="btn" name="login" (click)="handleEvent($event)">Click Me</button>
+
+<br><br>
+<div (mouseenter)="handleEvent($event)" style="width: 200px; height: 200px; background-color: lightblue;">
+</div>
+
+<div (mouseleave)="handleEvent($event)"
+    style="width: 200px; height: 200px; background-color: lightgreen; margin-top: 20px;">
+</div>
+
+<br><br>
+<input type="text" (input)="handleEvent($event)" (focus)="handleEvent($event)" (blur)="handleEvent($event)"
+    placeholder="Type something..." name="user"> -->
+
+<!-- <h1>Get and set Input field value</h1>
+<h1>User is: {{ displayName }}</h1>
+<input type="text" value="{{ name }}" (input)="getName($event)" style="display: flex; margin-bottom: 5px;"
+    placeholder="Type something...">
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>
+<hr>
+<h1>Email is: {{ email }}</h1>
+<input type="text" value="{{ email }}" placeholder="enter email" #emailField>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button> -->
+
+<!-- <h1>If Else | Control Flow</h1> -->
+
+<!-- @if(x>15){
+<div style="width: 200px; height: 200px; background-color: lightblue;"></div>
+} -->
+
+<!-- <button (click)="toggle()">Toggle div</button>
+@if(display){
+<div style="width: 200px; height: 200px; background-color: lightblue;"></div>
+}
+
+<button (click)="toggleTwo()">{{toggleDiv ? 'Show red div' : 'Show green div'}} Second Div</button>
+@if(toggleDiv){
+<div style="width: 200px; height: 200px; background-color: green;"></div>
+}
+@else{
+<div style="width: 200px; height: 200px; background-color: red;"></div>
+} -->
+
+
+<!-- <h1>Else If</h1>
+
+<button (click)="handleColor(1)">Red</button>
+<button (click)="handleColor(2)">Blue</button>
+<button (click)="handleColor(3)">Green</button>
+<button (click)="handleColor(4)">Yellow</button>
+<input type="text" (input)="handleInput($event)" placeholder="Enter a number between 1-4">
+
+@if(color === 1){
+<div style="width: 100px; height: 100px; background-color: red;"></div>
+}
+@else if(color === 2){
+<div style="width: 100px; height: 100px; background-color: blue;"></div>
+}
+@else if(color === 3){
+<div style="width: 100px; height: 100px; background-color: green;"></div>
+}
+@else{
+<div style="width: 100px; height: 100px; background-color: yellow;"></div>
+} -->
+
+<h1>Switch Case</h1>
+
+<button (click)="handleColor('red')">Red</button>
+<button (click)="handleColor('blue')">Blue</button>
+<button (click)="handleColor('green')">Green</button>
+<button (click)="handleColor('yellow')">Yellow</button>
+<button (click)="handleColor('other')">Other</button>
+<input type="text" (input)="handleInput($event)" placeholder="Enter a color">
+<br><br>
+
+@switch(color){
+@case('red'){
+<div style="width: 100px; height: 100px; background-color: red;"></div>
+}
+@case('blue'){
+<div style="width: 100px; height: 100px; background-color: blue;"></div>
+}
+@case('green'){
+<div style="width: 100px; height: 100px; background-color: green;"></div>
+}
+@case('yellow'){
+<div style="width: 100px; height: 100px; background-color: yellow;"></div>
+}
+@default{
+<div style="width: 100px; height: 100px; background-color: black;"></div>
+}
+}
