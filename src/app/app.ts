@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -172,17 +172,43 @@ export class App {
 
   //Computed Signal
   // count: Signal<number> = computed(() => 200);// cannot use writable signal here, can't be updated
-  x = signal(10);
-  y = signal(20);
-  z = computed(() => this.x() + this.y());
+  // x = signal(10);
+  // y = signal(20);
+  // z = computed(() => this.x() + this.y());
 
-  showValue() {
-    console.log(this.z());
-    this.x.set(100); //update using computedsignal as dependencies are updated; cant change on their own
-    console.log(this.z());
-  }
-  updateX() {
-    this.x.set(200);
-  }
+  // showValue() {
+  //   console.log(this.z());
+  //   this.x.set(100); //update using computedsignal as dependencies are updated; cant change on their own
+  //   console.log(this.z());
+  // }
+  // updateX() {
+  //   this.x.set(200);
+  // }
 
+  //Effects 
+  // displayHeaading = false;
+  // username = signal('vaibhavi');
+  // count = signal(0);
+
+  // constructor() {
+  //   effect(() => {
+  //     if (this.count() == 2) {
+  //       this.displayHeaading = true;
+  //       setTimeout(() => { // can be used for api call also
+  //         this.displayHeaading = false;
+  //       }, 2000);
+  //     }
+  //     else {
+  //       this.displayHeaading = false;
+  //     }
+  //   });
+  // }
+  // toggleValue() {
+  //   // this.displayHeaading = !this.displayHeaading;
+  //   this.count.set(this.count() + 1);
+  // }
+
+  //contextual variables
+  // users = ['A', 'B', 'C', 'D', 'E'];
+  // users = []
 }
